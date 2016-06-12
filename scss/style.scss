@@ -1,23 +1,112 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  font-family: Verdana;
+  font-family: 'Handlee';
   font-size: 1.5em;
 }
 
+#logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo img {
+  position: absolute;
+  left: 5%;
+  width: 25%;
+}
+
+
+h2 {
+  font-family: 'Pacifico';
+  font-size: 2em;
+  text-align: center;
+  text-shadow: 2px 2px Steelblue;
+    -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+h2:hover { 
+  font-size:3em;
+  }
+
 #team-members {
   clear: both;
+  align-items: center;
+  justify-content: center;
+
 }
 
 #team-members .member {
-  float: left;
+  display: inline-block;
   /*border: 1px solid gray;*/
   margin: 10px;
   padding: 6px;
 }
 
-#team-members .member img {
-  width: 200px;
-  height: 200px;
+#team-members .member:nth-child(odd):hover {
+  display: inline-block;
+  /*border: 1px solid gray;*/
+  margin: 10px;
+  padding: 6px;
+    -webkit-transform: rotate(15deg);
+     -moz-transform: rotate(15deg);
+       -o-transform: rotate(15deg);
+      -ms-transform: rotate(15deg);
+          transform: rotate(15deg);
 }
+
+#team-members .member:nth-child(even):hover {
+  display: inline-block;
+  /*border: 1px solid gray;*/
+  margin: 10px;
+  padding: 6px;
+    -webkit-transform: rotate(-15deg);
+     -moz-transform: rotate(-15deg);
+       -o-transform: rotate(-15deg);
+      -ms-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+#team-members .member a img:last-child {
+  display: none;
+  }
+
+#team-members .member a img { 
+  -webkit-box-shadow: 5px 5px 5px #111;
+          box-shadow: 5px 5px 5px #111; 
+  border-radius:10px;
+  width: 200px;
+  height: 200px; 
+  -webkit-transition: all 2s ease;
+     -moz-transition: all 2s ease;
+       -o-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+          transition: all 2s ease;
+}
+
+
+#team-members .member a:hover img:first-child {
+  display: none;
+}
+
+#team-members .member a:hover img:last-child {
+  display: inline-block;
+  box-shadow: 4px 4px Steelblue;
+
+}
+
+
+
 
 #team-members .member div.name {
   text-align: center;  
